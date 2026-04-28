@@ -5,7 +5,6 @@ body {
     color: white;
 }
 
-/* HEADER */
 header {
     background: #020617;
     padding: 15px 0;
@@ -38,14 +37,14 @@ nav a:hover {
     color: #38bdf8;
 }
 
-/* HERO */
+
 .hero {
     margin-top: 80px;
     padding: 60px 20px;
     background: linear-gradient(135deg, #020617, #1e293b);
 }
 
-/* NOVO: alinhamento correto */
+
 .hero-content {
     display: flex;
     align-items: center;
@@ -72,7 +71,7 @@ nav a:hover {
     object-fit: cover;
 }
 
-/* CONTAINER */
+
 .container {
     width: 90%;
     max-width: 900px;
@@ -80,13 +79,13 @@ nav a:hover {
     padding: 40px 0;
 }
 
-/* GRID */
+
 .grid {
     display: flex;
     gap: 40px;
 }
 
-/* RESPONSIVO */
+
 @media (max-width: 768px) {
     .grid {
         flex-direction: column;
@@ -97,7 +96,7 @@ nav a:hover {
     }
 }
 
-/* CARD */
+
 .card {
     background: #1e293b;
     padding: 20px;
@@ -112,14 +111,14 @@ nav a:hover {
     transform: translateY(-5px);
 }
 
-/* TITULOS */
+
 h2 {
     border-bottom: 2px solid #38bdf8;
     display: inline-block;
     margin-bottom: 20px;
 }
 
-/* IMAGEM CERTIFICADO */
+
 .img-certificado {
     max-width: 220px;
     width: 100%;
@@ -133,7 +132,7 @@ h2 {
     transform: scale(1.05);
 }
 
-/* BOTÕES DE CONTATO */
+
 .botoes-contato {
     display: flex;
     gap: 15px;
