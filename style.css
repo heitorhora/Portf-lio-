@@ -1,0 +1,163 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0f172a;
+    color: white;
+}
+
+/* HEADER */
+header {
+    background: #020617;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* HERO */
+.hero {
+    margin-top: 80px;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #020617, #1e293b);
+}
+
+/* NOVO: alinhamento correto */
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.hero-text h2 {
+    margin: 0;
+}
+
+.hero-text p {
+    margin-top: 10px;
+    color: #cbd5f5;
+}
+
+.foto-perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #38bdf8;
+    object-fit: cover;
+}
+
+/* CONTAINER */
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 0;
+}
+
+/* GRID */
+.grid {
+    display: flex;
+    gap: 40px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .grid {
+        flex-direction: column;
+    }
+
+    .hero-content {
+        flex-direction: column;
+    }
+}
+
+/* CARD */
+.card {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px ;
+    transition: 0.3s;
+    max-width: 400px;
+    text-align: start;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* TITULOS */
+h2 {
+    border-bottom: 2px solid #38bdf8;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+/* IMAGEM CERTIFICADO */
+.img-certificado {
+    max-width: 220px;
+    width: 100%;
+    display: block;
+    margin: 15px auto;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.img-certificado:hover {
+    transform: scale(1.05);
+}
+
+/* BOTÕES DE CONTATO */
+.botoes-contato {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap; /* quebra no celular */
+}
+
+.btn-contato {
+    padding: 10px 20px;
+    background: #38bdf8;
+    color: black;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-contato:hover {
+    background: #0ea5e9;
+    transform: translateY(-2px);
+}
+
+.botoes-hero {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
