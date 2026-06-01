@@ -37,13 +37,11 @@ nav a:hover {
     color: #38bdf8;
 }
 
-
 .hero {
     margin-top: 80px;
     padding: 60px 20px;
     background: linear-gradient(135deg, #020617, #1e293b);
 }
-
 
 .hero-content {
     display: flex;
@@ -71,7 +69,6 @@ nav a:hover {
     object-fit: cover;
 }
 
-
 .container {
     width: 90%;
     max-width: 900px;
@@ -79,38 +76,37 @@ nav a:hover {
     padding: 40px 0;
 }
 
-
 .grid {
     display: flex;
     gap: 40px;
 }
 
-
-@media (max-width: 768px) {
-    .grid {
-        flex-direction: column;
-    }
-
-    .hero-content {
-        flex-direction: column;
-    }
+/* Grid específico para os eventos ficarem lado a lado */
+.eventos-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
-
 
 .card {
     background: #1e293b;
     padding: 20px;
     border-radius: 10px;
-    margin: 20px ;
+    margin: 10px 0;
     transition: 0.3s;
+    flex: 1 1 calc(33.333% - 20px);
+    min-width: 250px;
     max-width: 400px;
     text-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .card:hover {
     transform: translateY(-5px);
 }
-
 
 h2 {
     border-bottom: 2px solid #38bdf8;
@@ -118,12 +114,11 @@ h2 {
     margin-bottom: 20px;
 }
 
-
 .img-certificado {
     max-width: 220px;
     width: 100%;
     display: block;
-    margin: 15px auto;
+    margin: 15px auto 0 auto;
     border-radius: 8px;
     transition: 0.3s;
 }
@@ -132,12 +127,11 @@ h2 {
     transform: scale(1.05);
 }
 
-
 .botoes-contato {
     display: flex;
     gap: 15px;
     margin-top: 20px;
-    flex-wrap: wrap; /* quebra no celular */
+    flex-wrap: wrap;
 }
 
 .btn-contato {
@@ -159,4 +153,15 @@ h2 {
     margin-top: 20px;
     display: flex;
     justify-content: center;
+}
+
+/* Responsividade Geral */
+@media (max-width: 768px) {
+    .grid {
+        flex-direction: column;
+    }
+
+    .hero-content {
+        flex-direction: column;
+    }
 }
