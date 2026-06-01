@@ -136,24 +136,34 @@ h2 {
 /* Layout interno do card do PIT (Certificado e Carrossel) */
 .midia-container {
     display: flex;
-    gap: 15px;
+    gap: 20px;
     align-items: center;
-    justify-content: space-between;
-    margin-top: 15px;
+    justify-content: center;
+    margin-top: 20px;
     width: 100%;
 }
 
 .link-cert-pit {
     flex: 1;
-    width: 100%;
+    max-width: 240px;
 }
 
-/* Estrutura do Carrossel */
+/* Força o certificado do PIT a ter o mesmo tamanho simétrico do carrossel */
+.link-cert-pit .img-certificado {
+    width: 100%;
+    height: 160px;       
+    object-fit: contain; 
+    background: #0f172a; 
+    border-radius: 8px;
+    margin: 0;           
+}
+
+/* Estrutura do Carrossel com tamanho ajustado para alinhar perfeitamente */
 .carrossel {
     flex: 1;
     width: 100%;
-    max-width: 220px;
-    height: 145px;
+    max-width: 240px;    
+    height: 160px;       
     position: relative;
     border-radius: 8px;
     border: 1px solid #38bdf8;
@@ -171,7 +181,7 @@ h2 {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover;   
     opacity: 0;
     transition: opacity 0.8s ease-in-out;
 }
@@ -223,10 +233,4 @@ h2 {
 /* Celular joga o carrossel para baixo */
 @media (max-width: 550px) {
     .midia-container {
-        flex-direction: column;
-    }
-    .carrossel {
-        max-width: 220px;
-        height: 145px;
-    }
-}
+        flex-direction
