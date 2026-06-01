@@ -115,4 +115,138 @@ nav a:hover {
 }
 
 h2 {
-    border-bottom: 2px solid
+    border-bottom: 2px solid #38bdf8;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.img-certificado {
+    max-width: 220px;
+    width: 100%;
+    display: block;
+    margin: 15px auto 0 auto;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.img-certificado:hover {
+    transform: scale(1.05);
+}
+
+/* Layout interno do card do PIT (Certificado e Carrossel) */
+.midia-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.link-cert-pit {
+    flex: 1;
+    max-width: 240px;
+}
+
+/* Força o certificado do PIT a ter o mesmo tamanho simétrico do carrossel */
+.link-cert-pit .img-certificado {
+    width: 100%;
+    height: 160px;       
+    object-fit: contain; 
+    background: #0f172a; 
+    border-radius: 8px;
+    margin: 0;           
+}
+
+/* Estrutura do Carrossel com tamanho ajustado para alinhar perfeitamente */
+.carrossel {
+    flex: 1;
+    width: 100%;
+    max-width: 240px;    
+    height: 160px;       
+    position: relative;
+    border-radius: 8px;
+    border: 1px solid #38bdf8;
+    overflow: hidden;
+}
+
+.carrossel-fotos {
+    width: 100%;
+    height: 100%;
+}
+
+.carrossel-fotos img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Mudado para 'contain' para mostrar a foto inteira sem cortar */
+    object-fit: contain;   
+    /* Fundo escuro sutil para preencher onde a foto não alcançar */
+    background-color: #0b111e; 
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+/* Ativado pelo JavaScript */
+.carrossel-fotos img.active {
+    opacity: 1;
+}
+
+.botoes-contato {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-contato {
+    padding: 10px 20px;
+    background: #38bdf8;
+    color: black;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-contato:hover {
+    background: #0ea5e9;
+    transform: translateY(-2px);
+}
+
+.botoes-hero {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Responsividade Geral */
+@media (max-width: 768px) {
+    .grid {
+        flex-direction: column;
+    }
+
+    .hero-content {
+        flex-direction: column;
+    }
+}
+
+/* Celular joga o carrossel para baixo */
+@media (max-width: 550px) {
+    .midia-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .link-cert-pit, .carrossel {
+        max-width: 100%;
+        width: 100%;
+    }
+    .link-cert-pit .img-certificado {
+        height: auto;
+    }
+    .carrossel {
+        height: 180px; 
+    }
+}
