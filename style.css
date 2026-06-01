@@ -81,7 +81,7 @@ nav a:hover {
     gap: 40px;
 }
 
-/* Grid específico para os eventos ficarem lado a lado */
+/* Grid para os cards ficarem lado a lado */
 .eventos-grid {
     display: flex;
     gap: 20px;
@@ -102,6 +102,12 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+/* Ajuste do tamanho do card do PIT */
+.card-pit {
+    max-width: 100% !important;
+    flex: 2 1 calc(66.666% - 20px) !important;
 }
 
 .card:hover {
@@ -125,6 +131,54 @@ h2 {
 
 .img-certificado:hover {
     transform: scale(1.05);
+}
+
+/* Layout interno do card do PIT (Certificado e Carrossel) */
+.midia-container {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.link-cert-pit {
+    flex: 1;
+    width: 100%;
+}
+
+/* Estrutura do Carrossel */
+.carrossel {
+    flex: 1;
+    width: 100%;
+    max-width: 220px;
+    height: 145px;
+    position: relative;
+    border-radius: 8px;
+    border: 1px solid #38bdf8;
+    overflow: hidden;
+}
+
+.carrossel-fotos {
+    width: 100%;
+    height: 100%;
+}
+
+.carrossel-fotos img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+/* Ativado pelo JavaScript */
+.carrossel-fotos img.active {
+    opacity: 1;
 }
 
 .botoes-contato {
@@ -163,5 +217,16 @@ h2 {
 
     .hero-content {
         flex-direction: column;
+    }
+}
+
+/* Celular joga o carrossel para baixo */
+@media (max-width: 550px) {
+    .midia-container {
+        flex-direction: column;
+    }
+    .carrossel {
+        max-width: 220px;
+        height: 145px;
     }
 }
