@@ -77,37 +77,69 @@ nav a:hover {
     width: 90%;
     max-width: 900px;
     margin: auto;
-    padding: 40px 0;
+    padding: 30px 0;
 }
 
-/* Aplica a borda azul e o fundo de card nas seções Sobre, Formação e Habilidades */
+/* Ajustado padding e line-height para dar melhor leitura aos textos */
 #sobre, #Formação, #habilidades {
     background: #1e293b;
-    padding: 30px;
+    padding: 30px 35px;
     border-radius: 10px;
     border: 1px solid #38bdf8;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 25px;
+    margin-bottom: 25px;
     box-sizing: border-box;
+    line-height: 1.6;
 }
 
-/* O setor de Eventos e Contato não precisam de fundo próprio porque já contêm cards/botões */
+#sobre p, #Formação p {
+    margin-bottom: 0;
+}
+
 #eventos, #contato {
     background: transparent;
-    padding: 40px 0;
+    padding: 30px 0;
 }
 
-/* Títulos h2 limpos (a borda agora abraça a seção inteira) */
+/* Títulos h2 com espaçamento corrigido */
 h2 {
     display: block;
     margin-top: 0;
     margin-bottom: 20px;
-    color: #38bdf8; /* Deixa o título em destaque com a cor do tema */
+    color: #38bdf8;
 }
 
 .grid {
     display: flex;
-    gap: 40px;
+    gap: 60px; /* Aumentado o vão entre as colunas de skills */
+}
+
+/* Ajuste sutil nas listas de habilidades */
+#habilidades h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: #cbd5f5;
+}
+
+#habilidades ul {
+    list-style: none; /* Remove as bolinhas para um visual clean */
+    padding-left: 0;
+    margin: 0;
+}
+
+#habilidades ul li {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 15px;
+}
+
+/* Adiciona um traço azul customizado no lugar da bolinha antiga */
+#habilidades ul li::before {
+    content: "•";
+    color: #38bdf8;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
 }
 
 /* ==========================================================================
@@ -123,7 +155,7 @@ h2 {
 
 .card {
     background: #1e293b;
-    padding: 20px;
+    padding: 25px;
     border-radius: 10px;
     margin: 10px 0;
     transition: 0.3s;
@@ -134,7 +166,18 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 1px solid #38bdf8; /* Borda idêntica nas seções */
+    border: 1px solid #38bdf8;
+}
+
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin-top: 0;
+    color: #cbd5f5;
+    line-height: 1.5;
 }
 
 /* Ajuste do tamanho do card do PIT */
@@ -160,7 +203,7 @@ h2 {
     transform: scale(1.05);
 }
 
-/* Layout interno do card do PIT (Certificado e Carrossel) */
+/* Layout interno do card do PIT */
 .midia-container {
     display: flex;
     gap: 20px;
@@ -175,7 +218,6 @@ h2 {
     max-width: 240px;
 }
 
-/* Força o certificado do PIT a ter o mesmo tamanho simétrico do carrossel */
 .link-cert-pit .img-certificado {
     width: 100%;
     height: 160px;       
@@ -185,7 +227,6 @@ h2 {
     margin: 0;           
 }
 
-/* Estrutura do Carrossel com tamanho ajustado para alinhar perfeitamente */
 .carrossel {
     flex: 1;
     width: 100%;
@@ -214,7 +255,6 @@ h2 {
     transition: opacity 0.8s ease-in-out;
 }
 
-/* Ativado pelo JavaScript */
 .carrossel-fotos img.active {
     opacity: 1;
 }
@@ -226,7 +266,7 @@ h2 {
 .botoes-contato {
     display: flex;
     gap: 15px;
-    margin-top: 20px;
+    margin-top: 15px; /* Alinhado proporcionalmente ao título */
     flex-wrap: wrap;
 }
 
@@ -258,14 +298,18 @@ h2 {
 @media (max-width: 768px) {
     .grid {
         flex-direction: column;
+        gap: 30px;
     }
 
     .hero-content {
         flex-direction: column;
     }
+    
+    #sobre, #Formação, #habilidades {
+        padding: 25px 20px;
+    }
 }
 
-/* Celular joga o carrossel para baixo */
 @media (max-width: 550px) {
     .midia-container {
         flex-direction: column;
