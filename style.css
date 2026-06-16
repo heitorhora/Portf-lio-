@@ -70,7 +70,7 @@ nav a:hover {
 }
 
 /* ==========================================================================
-   ESTILIZAÇÃO DAS SEÇÕES PRINCIPAIS (MOLDURA NO CONTEÚDO TODO)
+   ESTILIZAÇÃO DAS SEÇÕES PRINCIPAIS
    ========================================================================== */
 
 .container {
@@ -139,14 +139,32 @@ h2 {
 }
 
 /* ==========================================================================
-   CARDS DE EVENTOS E PROJETOS
+   CARDS E GRIDS (PROJETOS LADO A LADO)
    ========================================================================== */
 
-.projetos-grid, .eventos-grid {
+.projetos-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Força os dois cards de projetos a dividirem a linha igualmente */
+.projetos-grid .card {
+    flex: 1 1 calc(50% - 20px);
+    min-width: 280px;
+}
+
+.eventos-grid {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
     justify-content: flex-start;
+}
+
+.eventos-grid .card {
+    flex: 1 1 calc(33.333% - 20px);
+    min-width: 250px;
+    max-width: 400px;
 }
 
 .card {
@@ -155,14 +173,12 @@ h2 {
     border-radius: 10px;
     margin: 10px 0;
     transition: 0.3s;
-    flex: 1 1 calc(33.333% - 20px);
-    min-width: 250px;
-    max-width: 400px;
     text-align: start;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     border: 1px solid #38bdf8;
+    box-sizing: border-box;
 }
 
 .card h3 {
@@ -222,8 +238,12 @@ h2 {
     margin: 0;              
 }
 
-/* ESTRUTURA BASE DO CARROSSEL */
-.carrossel {
+/* ==========================================================================
+   SISTEMA DE CARROSSEIS (CORRIGIDO)
+   ========================================================================== */
+
+/* Container do carrossel do PIT (Lateral) */
+.carrossel-pit-container {
     flex: 1;
     width: 100%;
     max-width: 240px;    
@@ -234,6 +254,19 @@ h2 {
     overflow: hidden;
 }
 
+/* Container do carrossel de Projetos (Horizontal/Abaixo do texto) */
+.carrossel-projeto-container {
+    width: 100%;
+    height: 180px;       
+    position: relative;
+    border-radius: 8px;
+    border: 1px solid #38bdf8;
+    overflow: hidden;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+/* Compartilhamento da mecânica de transição absoluta */
 .carrossel-fotos {
     width: 100%;
     height: 100%;
@@ -256,16 +289,8 @@ h2 {
     opacity: 1;
 }
 
-/* Ajuste amplo para o carrossel horizontal de prints da Atividade 5 */
-.carrossel-projeto {
-    max-width: 100% !important;
-    height: 240px;
-    margin-top: 15px;
-    margin-bottom: 5px;
-}
-
 /* ==========================================================================
-   ELEMENTOS DE CONTATO E BOTÕES
+   CONTATO E RESPONSIVIDADE
    ========================================================================== */
 
 .botoes-contato {
@@ -296,10 +321,6 @@ h2 {
     justify-content: center;
 }
 
-/* ==========================================================================
-   RESPONSIVIDADE
-   ========================================================================== */
-
 @media (max-width: 768px) {
     .grid {
         flex-direction: column;
@@ -313,6 +334,10 @@ h2 {
     #sobre, #Formação, #habilidades {
         padding: 25px 20px;
     }
+    
+    .projetos-grid .card {
+        flex: 1 1 100%;
+    }
 }
 
 @media (max-width: 550px) {
@@ -320,22 +345,14 @@ h2 {
         flex-direction: column;
         gap: 15px;
     }
-    .link-cert-pit, .carrossel {
+    .link-cert-pit, .carrossel-pit-container {
         max-width: 100%;
         width: 100%;
     }
     .link-cert-pit .img-certificado {
         height: auto;
     }
-    .carrossel {
+    .carrossel-pit-container {
         height: 180px; 
     }
-    .carrossel-projeto {
-        height: 180px !important;
-    }
-}
-
-.card-wide {
-    max-width: 100% !important;
-    flex: 1 1 100% !important;
 }
