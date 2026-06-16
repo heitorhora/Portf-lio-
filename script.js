@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
     
-    // Função genérica para criar um carrossel em qualquer container
+    // Função automatizada para rodar as imagens dos carrosséis
     function iniciarCarrossel(idContainer) {
         const container = document.getElementById(idContainer);
-        if (!container) return; // Se não achar o ID na página, não faz nada
+        if (!container) return; 
         
         const imagens = container.querySelectorAll("img");
         const totalImagens = imagens.length;
@@ -13,23 +13,23 @@ document.addEventListener("DOMContentLoaded", () => {
         let index = 0;
 
         function mudarFoto() {
-            // Esconde a foto atual tirando a classe 'active'
+            // Remove a visibilidade da foto atual
             imagens[index].classList.remove("active");
             
-            // Vai para a próxima foto
+            // Incrementa o índice para ir para o próximo print
             index = (index + 1) % totalImagens;
             
-            // Mostra a nova foto adicionando a classe 'active'
+            // Aplica a opacidade na nova foto ativa
             imagens[index].classList.add("active");
         }
 
-        // Muda a foto automaticamente a cada 3 segundos
+        // Altera o slide automaticamente a cada 3000ms (3 segundos)
         setInterval(mudarFoto, 3000);
     }
 
-    // Inicializa o carrossel do PIT
+    // Inicializa o carrossel de fotos do evento no PIT
     iniciarCarrossel("fotosPit");
     
-    // Inicializa o carrossel da Atividade 5
+    // Inicializa o carrossel de prints da Atividade 5 (Docker/Barbearia/Hub)
     iniciarCarrossel("fotosAtividade5");
 });
