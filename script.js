@@ -1,10 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
     
     // Função genérica para criar um carrossel em qualquer container
-    // Basta passar o ID da div que contém as imagens
     function iniciarCarrossel(idContainer) {
         const container = document.getElementById(idContainer);
-        if (!container) return; // Se não achar o ID, não faz nada
+        if (!container) return; // Se não achar o ID na página, não faz nada
         
         const imagens = container.querySelectorAll("img");
         const totalImagens = imagens.length;
