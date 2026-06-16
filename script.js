@@ -1,23 +1,36 @@
 document.addEventListener("DOMContentLoaded", () => {
-    let index = 0;
-    // Seleciona todas as imagens dentro do carrossel do PIT
-    const imagens = document.querySelectorAll("#fotosPit img");
-    const totalImagens = imagens.length;
-
-    // Se não encontrar imagens, sai da função para não dar erro
-    if (totalImagens === 0) return;
-
-    function mudarFoto() {
-        // Esconde a foto atual tirando a classe 'active'
-        imagens[index].classList.remove("active");
+    
+    // Função genérica para criar um carrossel em qualquer container
+    // Basta passar o ID da div que contém as imagens
+    function iniciarCarrossel(idContainer) {
+        const container = document.getElementById(idContainer);
+        if (!container) return; // Se não achar o ID, não faz nada
         
-        // Vai para a próxima foto (se chegar na última, volta para a 0)
-        index = (index + 1) % totalImagens;
-        
-        // Mostra a nova foto adicionando a classe 'active'
-        imagens[index].classList.add("active");
+        const imagens = container.querySelectorAll("img");
+        const totalImagens = imagens.length;
+
+        if (totalImagens === 0) return;
+
+        let index = 0;
+
+        function mudarFoto() {
+            // Esconde a foto atual tirando a classe 'active'
+            imagens[index].classList.remove("active");
+            
+            // Vai para a próxima foto
+            index = (index + 1) % totalImagens;
+            
+            // Mostra a nova foto adicionando a classe 'active'
+            imagens[index].classList.add("active");
+        }
+
+        // Muda a foto automaticamente a cada 3 segundos
+        setInterval(mudarFoto, 3000);
     }
 
-    // Muda a foto automaticamente a cada 3 segundos (3000 milissegundos)
-    setInterval(mudarFoto, 3000);
+    // Inicializa o carrossel do PIT
+    iniciarCarrossel("fotosPit");
+    
+    // Inicializa o carrossel da Atividade 5
+    iniciarCarrossel("fotosAtividade5");
 });
