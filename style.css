@@ -80,7 +80,7 @@ nav a:hover {
     padding: 30px 0;
 }
 
-/* Ajustado padding e line-height para dar melhor leitura aos textos */
+/* Ajustado padding and line-height para dar melhor leitura aos textos */
 #sobre, #Formação, #habilidades {
     background: #1e293b;
     padding: 30px 35px;
@@ -327,6 +327,9 @@ h2 {
     .carrossel {
         height: 180px; 
     }
+    .carrossel-projeto {
+        height: 180px !important;
+    }
 }
 
 /* Estilo para o card com os prints */
@@ -361,4 +364,11 @@ h2 {
     .galeria-projeto {
         grid-template-columns: 1fr; /* 1 coluna apenas no celular */
     }
+}
+
+/* ESTILO CUSTOMIZADO PARA O CARROSSEL DE PROJETOS (WIDE) */
+.carrossel-projeto {
+    max-width: 100% !important;
+    height: 260px;
+    margin-top: 15px;
 }
