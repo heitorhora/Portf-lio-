@@ -96,7 +96,8 @@ nav a:hover {
     margin-bottom: 0;
 }
 
-#eventos, #contato {
+/* Incluída a tag #projetos para compartilhar o comportamento transparente */
+#projetos, #eventos, #contato {
     background: transparent;
     padding: 30px 0;
 }
@@ -143,10 +144,11 @@ h2 {
 }
 
 /* ==========================================================================
-   CARDS DE EVENTOS
+   CARDS DE EVENTOS E PROJETOS
    ========================================================================== */
 
-.eventos-grid {
+/* Incluída a classe .projetos-grid para reaproveitar o layout flexível */
+.projetos-grid, .eventos-grid {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
