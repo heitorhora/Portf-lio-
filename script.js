@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const imagens = container.querySelectorAll("img");
         const totalImagens = imagens.length;
 
-        if (totalImagens === 0) return;
+        if (totalImagens <= 1) return; // Não rotaciona se houver apenas 1 imagem
 
         let index = 0;
 
@@ -27,9 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
         setInterval(mudarFoto, 3000);
     }
 
-    // Inicializa o carrossel de fotos do evento no PIT
+    // Inicializa todos os carrosséis de forma independente e segura
     iniciarCarrossel("fotosPit");
-    
-    // Inicializa o carrossel de prints da Atividade 5 (Docker/Barbearia/Hub)
     iniciarCarrossel("fotosAtividade5");
+    iniciarCarrossel("fotosAtividade4");
 });
