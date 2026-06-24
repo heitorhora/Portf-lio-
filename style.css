@@ -122,32 +122,34 @@ h2 {
 }
 
 /* ==========================================================================
-   SEÇÃO DE HABILIDADES (DIVISÃO 50/50 COM ÍCONES)
+   SEÇÃO DE HABILIDADES (DIVISÃO 50/50 COM ÍCONES CORRIGIDA)
    ========================================================================== */
 
 .grid {
     display: flex;
     gap: 25px;
+    margin-top: 15px;
 }
 
-/* Força cada coluna a ocupar exatamente metade do espaço com visual de sub-card */
-.grid > div {
+/* Sub-cards internos */
+.grid .skill-card {
     flex: 1; 
     background: #0f172a; 
-    padding: 22px 25px;
+    padding: 25px;
     border-radius: 8px;
     border: 1px solid rgba(56, 189, 248, 0.2); 
     transition: 0.3s ease;
+    box-sizing: border-box;
 }
 
-.grid > div:hover {
+.grid .skill-card:hover {
     border-color: #38bdf8;
     transform: translateY(-2px);
 }
 
 #habilidades h3 {
     margin-top: 0;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     color: #38bdf8; 
     font-size: 18px;
     border-bottom: 1px solid #1e293b; 
@@ -156,25 +158,27 @@ h2 {
 
 #habilidades ul {
     list-style: none;
-    padding-left: 0;
+    padding: 0 !important; /* Força zerar qualquer recuo do navegador */
     margin: 0;
 }
 
 #habilidades ul li {
-    margin-bottom: 14px;
+    margin-bottom: 16px;
     display: flex;
-    align-items: center; /* Alinha o ícone verticalmente ao centro com o texto */
-    gap: 12px; /* Distância ideal do ícone para a descrição */
+    align-items: center; /* Alinha o ícone perfeitamente ao centro do texto */
+    gap: 12px; 
     color: #cbd5f5;
     font-size: 15px;
+    text-align: left;
 }
 
-/* Estilização profissional dos ícones das habilidades */
+/* Estilização dos ícones */
 .skill-icon {
     color: #38bdf8;
     font-size: 18px;
-    width: 24px; /* Largura fixa impede que textos fiquem desalinhados na esquerda */
+    width: 25px; /* Largura fixa impede o desalinhamento do texto */
     text-align: center;
+    flex-shrink: 0; /* Garante que o ícone não esmague em telas menores */
 }
 
 /* ==========================================================================
@@ -185,16 +189,14 @@ h2 {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
-    align-items: stretch; /* Força todos os cards da mesma linha a terem a mesma altura */
+    align-items: stretch;
 }
 
-/* Define que os cards normais ocupam metade da tela (2 por linha) */
 .projetos-grid .card, .eventos-grid .card {
     flex: 1 1 calc(50% - 10px);
     min-width: 280px;
 }
 
-/* Configura o card do PIT para ocupar 100% da largura abaixo dos outros dois */
 .card-pit {
     flex: 1 1 100% !important;
     max-width: 100% !important;
@@ -207,15 +209,13 @@ h2 {
     border: 1px solid #38bdf8;
     box-sizing: border-box;
     transition: 0.3s;
-    
-    /* Configuração interna para empurrar as mídias para o rodapé do card */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .card-body {
-    flex-grow: 1; /* Faz o texto ocupar o espaço necessário no topo */
+    flex-grow: 1;
 }
 
 .card h3 {
@@ -233,16 +233,23 @@ h2 {
     transform: translateY(-5px);
 }
 
-/* Padronização das Imagens de Certificado */
+.tech-used {
+    margin-top: 10px; 
+    font-size: 14px; 
+    color: #38bdf8; 
+    margin-bottom: 0;
+}
+
+/* Imagens de Certificado */
 .img-certificado-wrapper {
-    margin-top: auto; /* Empurra o certificado sempre para o final do card */
+    margin-top: 15px;
     width: 100%;
 }
 
 .img-certificado {
     width: 100%;
     height: 150px;
-    object-fit: contain; /* Mantém a proporção da imagem sem distorcer */
+    object-fit: contain;
     background: #0f172a;
     border-radius: 8px;
     border: 1px solid #1e293b;
@@ -256,7 +263,7 @@ h2 {
     border-color: #38bdf8;
 }
 
-/* Layout interno especial do card do PIT */
+/* Layout do PIT */
 .midia-container {
     display: flex;
     gap: 20px;
@@ -280,7 +287,6 @@ h2 {
    SISTEMA DE CARROSSEIS
    ========================================================================== */
 
-/* Container do carrossel do PIT (Lateral) */
 .carrossel-pit-container {
     flex: 1;
     width: 100%;
@@ -292,7 +298,6 @@ h2 {
     overflow: hidden;
 }
 
-/* Container dos carrosséis dos Projetos 4 e 5 */
 .carrossel-projeto-container {
     width: 100%;
     height: 160px;       
@@ -301,7 +306,7 @@ h2 {
     border: 1px solid #38bdf8;
     overflow: hidden;
     margin-top: 15px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .carrossel-fotos {
@@ -353,12 +358,12 @@ h2 {
 }
 
 /* ==========================================================================
-   REGRAS DE RESPONSIVIDADE (MOBILE & TABLETS)
+   REGRAS DE RESPONSIVIDADE
    ========================================================================== */
 
 @media (max-width: 768px) {
     .grid {
-        flex-direction: column; /* Faz os blocos de Habilidades empilharem no celular */
+        flex-direction: column;
         gap: 20px;
     }
 
