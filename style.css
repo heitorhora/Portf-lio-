@@ -1,0 +1,410 @@
+/* ==========================================================================
+   CONFIGURAÇÕES GERAIS E BASE
+   ========================================================================== */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0f172a;
+    color: white;
+}
+
+header {
+    background: #020617;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* ==========================================================================
+   SEÇÃO HERO (INTRODUÇÃO)
+   ========================================================================== */
+
+.hero {
+    margin-top: 80px;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #020617, #1e293b);
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.hero-text h2 {
+    margin: 0;
+}
+
+.hero-text p {
+    margin-top: 10px;
+    color: #cbd5f5;
+}
+
+.foto-perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #38bdf8;
+    object-fit: cover;
+}
+
+.botoes-hero {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* ==========================================================================
+   ESTILIZAÇÃO DAS SEÇÕES PRINCIPAIS (BLOCOS DE CONTEÚDO)
+   ========================================================================== */
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    padding: 30px 0;
+}
+
+#sobre, #Formação, #habilidades {
+    background: #1e293b;
+    padding: 30px 35px;
+    border-radius: 10px;
+    border: 1px solid #38bdf8;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+#sobre p, #Formação p {
+    margin-bottom: 0;
+}
+
+#projetos, #eventos, #contato {
+    background: transparent;
+    padding: 30px 0;
+}
+
+h2 {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #38bdf8;
+}
+
+/* ==========================================================================
+   SEÇÃO DE HABILIDADES (DIVISÃO 50/50 COM ÍCONES CORRIGIDA)
+   ========================================================================== */
+
+.grid {
+    display: flex;
+    gap: 25px;
+    margin-top: 15px;
+}
+
+/* Sub-cards internos */
+.grid .skill-card {
+    flex: 1; 
+    background: #0f172a; 
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid rgba(56, 189, 248, 0.2); 
+    transition: 0.3s ease;
+    box-sizing: border-box;
+}
+
+.grid .skill-card:hover {
+    border-color: #38bdf8;
+    transform: translateY(-2px);
+}
+
+#habilidades h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #38bdf8; 
+    font-size: 18px;
+    border-bottom: 1px solid #1e293b; 
+    padding-bottom: 8px;
+}
+
+#habilidades ul {
+    list-style: none;
+    padding: 0 !important; /* Força zerar qualquer recuo do navegador */
+    margin: 0;
+}
+
+#habilidades ul li {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center; /* Alinha o ícone perfeitamente ao centro do texto */
+    gap: 12px; 
+    color: #cbd5f5;
+    font-size: 15px;
+    text-align: left;
+}
+
+/* Estilização dos ícones */
+.skill-icon {
+    color: #38bdf8;
+    font-size: 18px;
+    width: 25px; /* Largura fixa impede o desalinhamento do texto */
+    text-align: center;
+    flex-shrink: 0; /* Garante que o ícone não esmague em telas menores */
+}
+
+/* ==========================================================================
+   ESTRUTURA DOS CARDS E GRIDS (PROJETOS E EVENTOS)
+   ========================================================================== */
+
+.projetos-grid, .eventos-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.projetos-grid .card, .eventos-grid .card {
+    flex: 1 1 calc(50% - 10px);
+    min-width: 280px;
+}
+
+.card-pit {
+    flex: 1 1 100% !important;
+    max-width: 100% !important;
+}
+
+.card {
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #38bdf8;
+    box-sizing: border-box;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-body {
+    flex-grow: 1;
+}
+
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin-top: 0;
+    color: #cbd5f5;
+    line-height: 1.5;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.tech-used {
+    margin-top: 10px; 
+    font-size: 14px; 
+    color: #38bdf8; 
+    margin-bottom: 0;
+}
+
+/* Imagens de Certificado */
+.img-certificado-wrapper {
+    margin-top: 15px;
+    width: 100%;
+}
+
+.img-certificado {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    background: #0f172a;
+    border-radius: 8px;
+    border: 1px solid #1e293b;
+    display: block;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+.img-certificado:hover {
+    transform: scale(1.03);
+    border-color: #38bdf8;
+}
+
+/* Layout do PIT */
+.midia-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.link-cert-pit {
+    flex: 1;
+    max-width: 50%;
+}
+
+.link-cert-pit .img-certificado {
+    height: 160px;
+    margin: 0;              
+}
+
+/* ==========================================================================
+   SISTEMA DE CARROSSEIS
+   ========================================================================== */
+
+.carrossel-pit-container {
+    flex: 1;
+    width: 100%;
+    max-width: 50%;    
+    height: 160px;       
+    position: relative;
+    border-radius: 8px;
+    border: 1px solid #38bdf8;
+    overflow: hidden;
+}
+
+.carrossel-projeto-container {
+    width: 100%;
+    height: 160px;       
+    position: relative;
+    border-radius: 8px;
+    border: 1px solid #38bdf8;
+    overflow: hidden;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.carrossel-fotos {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.carrossel-fotos img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;   
+    background-color: #0b111e;  
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.carrossel-fotos img.active {
+    opacity: 1;
+}
+
+/* ==========================================================================
+   BOTÕES E RODAPÉ DE CONTATO
+   ========================================================================== */
+
+.botoes-contato {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-contato {
+    padding: 10px 20px;
+    background: #38bdf8;
+    color: black;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-contato:hover {
+    background: #0ea5e9;
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   REGRAS DE RESPONSIVIDADE
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    .grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .hero-content {
+        flex-direction: column;
+    }
+    
+    #sobre, #Formação, #habilidades {
+        padding: 25px 20px;
+    }
+    
+    .projetos-grid .card, .eventos-grid .card {
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 550px) {
+    .midia-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .link-cert-pit, .carrossel-pit-container {
+        max-width: 100%;
+        width: 100%;
+    }
+    .carrossel-pit-container {
+        height: 180px; 
+    }
+}
+
+/* Cards de projeto no padrão de mercado */
+.badges { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 12px; }
+.badge { font-size: 12px; padding: 3px 10px; border-radius: 999px; border: 1px solid #38bdf8; color: #38bdf8; }
+.badge-stack { background: #0f172a; border-color: #334155; color: #cbd5f5; }
+.tags-stack { margin: 15px 0 0; }
+.lista-impacto { margin: 0; padding-left: 20px; color: #cbd5f5; line-height: 1.5; }
+.lista-impacto li { margin-bottom: 6px; }
+
+/* Campos exigidos para projetos API */
+.card-api { flex: 1 1 100% !important; max-width: 100% !important; }
+.campo { margin: 0 0 10px; }
+.campo strong { color: #38bdf8; }
+.campo a { color: #38bdf8; }
+.sub-projetos { margin: 30px 0 15px; color: #38bdf8; }

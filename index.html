@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Heitor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="container header-content">
+        <a href="#" class="logo">Portfólio</a>
+        <nav>
+            <a href="#sobre">Sobre</a>
+            <a href="#habilidades">Habilidades</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#eventos">Eventos</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <img src="imagens/foto perfil.png" alt="Foto de perfil" class="foto-perfil">
+        <div class="hero-text">
+            <h2>Heitor Silva Sales da Hora</h2>
+            <p>Estudante de DSM | Futuro Desenvolvedor</p>
+            <div class="botoes-hero">
+                <a href="curriculo/Curriculo - Heitor Silva Sales da Hora.pdf" target="_blank" class="btn-contato">
+                    Currículo
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="sobre" class="container">
+    <h2>Sobre mim</h2>
+    <p>
+        Sou estudante de Desenvolvimento de Software Multiplataforma (FATEC), com interesse em programação e desenvolvimento de soluções tecnológicas. 
+        Busco evoluir constantemente minhas habilidades e adquirir experiência prática.
+    </p>
+</section>
+
+<section id="Formação" class="container">
+    <h2>Formação</h2> 
+    <p>Colégio Adventista de São José dos Campos - (2020 - 2025)</p>
+    <p>Desenvolvimento de Software Multiplataforma – FATEC São José dos Campos (2026 - atual)</p>
+</section>
+
+<section id="habilidades" class="container">
+    <h2>Habilidades</h2>
+    <div class="grid">
+        <div class="skill-card">
+            <h3>Hard Skills</h3>
+            <ul>
+                <li><i class="fa-brands fa-html5 skill-icon"></i> HTML5 & CSS3</li>
+                <li><i class="fa-brands fa-python skill-icon"></i> Python (Flask)</li>
+                <li><i class="fa-solid fa-database skill-icon"></i> MySQL / Bancos Relacionais</li>
+                <li><i class="fa-brands fa-js skill-icon"></i> JavaScript (ES6+)</li>
+                <li><i class="fa-brands fa-git-alt skill-icon"></i> Git & GitHub (Versionamento)</li>
+                <li><i class="fa-brands fa-docker skill-icon"></i> Docker & Containers</li>
+            </ul>
+        </div>
+        <div class="skill-card">
+            <h3>Soft Skills</h3>
+            <ul>
+                <li><i class="fa-solid fa-users skill-icon"></i> Colaboração e Comunicação Eficaz</li>
+                <li><i class="fa-solid fa-list-check skill-icon"></i> Organização e Gestão de Tarefas</li>
+                <li><i class="fa-solid fa-brain skill-icon"></i> Resolução de Problemas Complexos</li>
+                <li><i class="fa-solid fa-graduation-cap skill-icon"></i> Aprendizado Rápido e Adaptabilidade</li>
+                <li><i class="fa-solid fa-diagram-project skill-icon"></i> Mentalidade Ágil (Scrum / Kanban)</li>
+                <li><i class="fa-solid fa-rocket skill-icon"></i> Proatividade e Iniciativa</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="projetos" class="container">
+    <h2>Projetos Desenvolvidos</h2>
+
+    <h3 class="sub-projetos">Projetos Acadêmicos (API)</h3>
+    <div class="projetos-grid">
+        <div class="card card-api">
+            <div class="card-body">
+                <h3>Radar Cidadão - Portal de Transparência dos Deputados</h3>
+                <div class="badges">
+                    <span class="badge">Projeto acadêmico (API - 1º DSM)</span>
+                    <span class="badge">Equipe de 7 pessoas</span>
+                    <span class="badge">Scrum - 3 sprints (mar a mai/2026)</span>
+                    <span class="badge">Papel: Desenvolvedor</span>
+                </div>
+                <p class="campo"><strong>Empresa parceira:</strong> sem empresa parceira. Os dados vêm da API de Dados Abertos da Câmara dos Deputados.</p>
+                <p class="campo"><strong>Problema:</strong> eleitores, jornalistas e professores precisam acompanhar a atuação dos parlamentares (presença em sessões, projetos apresentados e gastos com verba pública), mas esses dados estão dispersos em bases públicas brutas, difíceis de ler, filtrar e comparar.</p>
+                <p class="campo"><strong>Solução:</strong> aplicação web que coleta os dados públicos, processa e apresenta de forma clara:</p>
+                <ul class="lista-impacto">
+                    <li>Lista de deputados com foto e busca por nome, mais perfil detalhado com resumo de desempenho.</li>
+                    <li>Gastos parlamentares detalhados por fornecedor, presença em sessões e projetos de lei apresentados.</li>
+                    <li>Gráficos das atividades, comparação entre deputados e médias de indicadores da Câmara.</li>
+                    <li>Ranking de deputados por indicadores e avaliações dos usuários (nota e comentário) salvas em MySQL.</li>
+                </ul>
+                <p class="campo"><strong>Hard skills:</strong> consumo de API REST, rotas Flask com respostas JSON, modelagem e consultas em MySQL, visualização de dados em gráficos, containerização com Docker, prototipação no Figma e gestão de backlog no Jira.</p>
+                <p class="campo"><strong>Soft skills:</strong> trabalho em equipe sob Scrum, comunicação com o Product Owner, revisão de código em equipe e organização do trabalho por sprints.</p>
+                <p class="campo"><strong>Demonstração:</strong>
+                    <a href="https://www.youtube.com/watch?v=RNZoiRHVe1s" target="_blank" rel="noopener">MVP Sprint 1</a> |
+                    <a href="https://youtu.be/TtQeZ0cP71c" target="_blank" rel="noopener">MVP Sprint 2</a> |
+                    <a href="https://www.youtube.com/watch?v=3TDcRBkeUlo" target="_blank" rel="noopener">MVP Sprint 3</a>
+                </p>
+                <p class="campo"><strong>Repositório:</strong> <a href="https://github.com/eugeniojonatas/Radar-Cidadao-Froggrammers" target="_blank" rel="noopener">github.com/eugeniojonatas/Radar-Cidadao-Froggrammers</a></p>
+            </div>
+
+            <div class="carrossel-projeto-container">
+                <div class="carrossel-fotos" id="fotosRadar">
+                    <img src="imagens/imagens radar/home.png" alt="Página inicial do Radar Cidadão" class="active">
+                </div>
+            </div>
+
+            <div class="badges tags-stack">
+                <span class="badge badge-stack">Python</span>
+                <span class="badge badge-stack">Flask</span>
+                <span class="badge badge-stack">MySQL</span>
+                <span class="badge badge-stack">HTML/CSS/JS</span>
+                <span class="badge badge-stack">Docker</span>
+                <span class="badge badge-stack">Figma</span>
+                <span class="badge badge-stack">Jira</span>
+                <span class="badge badge-stack">API Dados Abertos</span>
+            </div>
+        </div>
+
+        <div class="card card-api">
+            <div class="card-body">
+                <h3>Altave OS - Sistema de Ordens de Serviço</h3>
+                <div class="badges">
+                    <span class="badge">Projeto acadêmico (API - 2º DSM)</span>
+                    <span class="badge">Equipe de 6 pessoas</span>
+                    <span class="badge">Scrum - 3 sprints</span>
+                    <span class="badge">Papel: Desenvolvedor</span>
+                </div>
+                <p class="campo"><strong>Empresa parceira:</strong> Altave.</p>
+                <p class="campo"><strong>Problema:</strong> a necessidade de abrir, acompanhar e encerrar solicitações de manutenção ou serviço mantendo o histórico completo de cada ordem (status, responsáveis e prazos), para dar rastreabilidade e facilitar a comunicação entre solicitantes e executantes, priorizando por urgência ou criticidade.</p>
+                <p class="campo"><strong>Solução:</strong> aplicação web interna para o ciclo completo das ordens de serviço, com rastreabilidade e acesso por perfil:</p>
+                <ul class="lista-impacto">
+                    <li>Quadro Kanban com status e prioridade (baixa a urgente) para acompanhar o fluxo de cada ordem.</li>
+                    <li>Histórico em linha do tempo por ordem, com quem fez, quando e o que mudou, mais log de auditoria.</li>
+                    <li>Controle de acesso por 4 perfis (usuário, executor, gestor e administrador) com autenticação JWT e senhas com hash (bcrypt).</li>
+                    <li>Notificação por e-mail ao responsável em novas atribuições e mudanças de status.</li>
+                    <li>Relatórios com filtros e exportação em Excel e CSV.</li>
+                    <li>API REST documentada com OpenAPI/Swagger, testes BDD (Cucumber) e ambiente de homologação com Docker Compose.</li>
+                </ul>
+                <p class="campo"><strong>Hard skills:</strong> API REST com Node.js e Express, modelagem relacional com Prisma e PostgreSQL, autenticação JWT e controle de acesso por perfil, front-end em React, testes BDD com Cucumber, documentação OpenAPI/Swagger e ambiente de homologação com Docker Compose.</p>
+                <p class="campo"><strong>Soft skills:</strong> trabalho em equipe sob Scrum, comunicação entre papéis (PO, Scrum Master e Dev team), cumprimento de prazos por sprint e resolução colaborativa de problemas.</p>
+                <p class="campo"><strong>Repositório:</strong> <a href="https://github.com/lucasfisioramos-cmyk/Zip-Coders" target="_blank" rel="noopener">github.com/lucasfisioramos-cmyk/Zip-Coders</a></p>
+            </div>
+
+            <div class="carrossel-projeto-container">
+                <div class="carrossel-fotos" id="fotosAltave">
+                    <img src="imagens/imagens altave/kanban.png" alt="Quadro Kanban do Altave OS" class="active">
+                    <img src="imagens/imagens altave/nova-ordem.png" alt="Nova ordem de serviço">
+                    <img src="imagens/imagens altave/historico.png" alt="Histórico da ordem">
+                    <img src="imagens/imagens altave/relatorios.png" alt="Relatórios">
+                </div>
+            </div>
+
+            <div class="badges tags-stack">
+                <span class="badge badge-stack">React</span>
+                <span class="badge badge-stack">Vite</span>
+                <span class="badge badge-stack">Node.js</span>
+                <span class="badge badge-stack">Express</span>
+                <span class="badge badge-stack">Prisma</span>
+                <span class="badge badge-stack">PostgreSQL</span>
+                <span class="badge badge-stack">JWT</span>
+                <span class="badge badge-stack">Swagger</span>
+                <span class="badge badge-stack">Cucumber</span>
+                <span class="badge badge-stack">Docker</span>
+            </div>
+        </div>
+    </div>
+
+    <h3 class="sub-projetos">Atividades Acadêmicas de Disciplina</h3>
+    <div class="projetos-grid">
+        <div class="card">
+            <div class="card-body">
+                <h3>Sistema de Gestão de Agendamentos (Atividade 4)</h3>
+                <p>Desenvolvimento de uma aplicação web voltada para o gerenciamento de uma barbearia. Foco em CRUD, banco de dados MySQL e variáveis de ambiente.</p>
+            </div>
+            
+            <div class="carrossel-projeto-container">
+                <div class="carrossel-fotos" id="fotosAtividade4">
+                    <img src="imagens/print2.png" alt="Landing Page Barbearia" class="active">
+                </div>
+            </div>
+
+            <p class="tech-used"><strong>Tecnologias:</strong> Python, Flask, MySQL.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <h3>Deploy e Infraestrutura na Nuvem (Atividade 5)</h3>
+                <p>Implementação em AWS EC2 com Docker Compose. Automação de serviços e persistência de dados em servidor Linux.</p>
+            </div>
+            
+            <div class="carrossel-projeto-container">
+                <div class="carrossel-fotos" id="fotosAtividade5">
+                    <img src="imagens/print.png" alt="Terminal Docker" class="active">
+                    <img src="imagens/print2.png" alt="Landing Page">
+                    <img src="imagens/print3.png" alt="Docker Hub">
+                </div>
+            </div>
+            
+            <p class="tech-used"><strong>Tecnologias:</strong> AWS EC2, Docker, Docker Compose, Linux.</p>
+        </div>
+    </div>
+</section>
+
+<section id="eventos" class="container">
+    <h2>Eventos</h2>
+    <div class="eventos-grid">
+        <div class="card">
+            <div class="card-body">
+                <h3>Maratona de Programação</h3>
+                <p>Participação em desafios de lógica e programação em equipe.</p>
+            </div>
+            <div class="img-certificado-wrapper">
+                <a href="imagens/certificado.jpeg" target="_blank">
+                    <img src="imagens/certificado.jpeg" alt="Certificado da maratona" class="img-certificado">
+                </a>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-body">
+                <h3>Interfatecs</h3>
+                <p>Participação em desafios de lógica e programação em equipe.</p>
+            </div>
+            <div class="img-certificado-wrapper">
+                <a href="imagens/certificado_interfatec.jpeg" target="_blank">
+                    <img src="imagens/certificado_interfatec.jpeg" alt="Certificado Interfatecs" class="img-certificado">
+                </a>
+            </div>
+        </div>
+        
+        <div class="card card-pit">
+            <div class="card-body">
+                <h3>Parque de Inovação Tecnológica</h3>
+                <p>Participação no evento Science & Business Connection como voluntário.</p>
+            </div>
+            <div class="midia-container">
+                <a href="imagens/imagens pit/Certificado pit.jpg" target="_blank" class="link-cert-pit">
+                    <img src="imagens/imagens pit/Certificado pit.jpg" alt="Certificado do evento" class="img-certificado">
+                </a>
+                <div class="carrossel-pit-container">
+                    <div class="carrossel-fotos" id="fotosPit">
+                        <img src="imagens/imagens pit/foto-pit1.jpeg" alt="Foto no PIT 1" class="active">
+                        <img src="imagens/imagens pit/foto-pit2.jpeg" alt="Foto no PIT 2">
+                        <img src="imagens/imagens pit/foto-pit3.jpeg" alt="Foto no PIT 3">
+                        <img src="imagens/imagens pit/foto-pit4.jpeg" alt="Foto no PIT 4">
+                        <img src="imagens/imagens pit/foto-pit5.jpeg" alt="Foto no PIT 5">
+                        <img src="imagens/imagens pit/foto-pit6.jpeg" alt="Foto no PIT 6">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contato" class="container">
+    <h2>Contatos</h2>
+    <div class="botoes-contato">
+        <a href="https://mail.google.com/mail/?view=cm&to=heitorhora1910@gmail.com" target="_blank" class="btn-contato">Email</a>
+        <a href="https://github.com/heitorhora" target="_blank" class="btn-contato">GitHub</a>
+        <a href="https://www.linkedin.com/in/heitor-da-hora-206051400?trk=public_profile" target="_blank" class="btn-contato">LinkedIn</a>
+    </div>
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
